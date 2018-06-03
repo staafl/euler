@@ -3,7 +3,7 @@ include "win32ax.inc"
 
   start:
         mov ecx, 999            ; load the start number to counter
-        
+
   .loop:
         xor edx, edx            ; reset edx. we want 32 bit result, so we are doing 64 bit division
         mov eax, ecx            ; prepare division
@@ -18,7 +18,7 @@ include "win32ax.inc"
         div ebx                 ; divide: edx = eax / ebx
         cmp edx, 0              ; check if there is remainder
         jnz start.skip          ; if so, skip this number
-        
+
   .success:
         add [sum], ecx          ; add number to variable
 
