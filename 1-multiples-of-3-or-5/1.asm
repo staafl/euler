@@ -15,7 +15,7 @@ include "win32ax.inc"
         xor edx, edx            ; again, reset edx
         mov eax, ecx            ; prepare division
         mov ebx, 5              ; load second divisor (5)
-        div ebx                 ; divide
+        div ebx                 ; divide: edx = eax / ebx
         cmp edx, 0              ; check if there is remainder
         jnz start.skip          ; if so, skip this number
         
